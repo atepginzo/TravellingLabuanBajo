@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/* ===== CSS Custom Properties ===== */
+@theme {
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --color-ocean-50: #e6f7fa;
+  --color-ocean-100: #b3e8f2;
+  --color-ocean-200: #80d9ea;
+  --color-ocean-300: #4dcae2;
+  --color-ocean-400: #26bfdb;
+  --color-ocean-500: #00b4d8;
+  --color-ocean-600: #0096b7;
+  --color-ocean-700: #007896;
+  --color-ocean-800: #005a75;
+  --color-ocean-900: #003c54;
+
+  --color-sunset-400: #f9a825;
+  --color-sunset-500: #f57f17;
+  --color-sunset-600: #e65100;
+
+  --color-sand-50: #fefcf3;
+  --color-sand-100: #fbf5e0;
+  --color-sand-200: #f5e6b8;
+
+  --color-deep-800: #0a1628;
+  --color-deep-900: #060e1a;
+}
+
+/* ===== Base Styles ===== */
+body {
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #060e1a;
+  color: #e2e8f0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* ===== Smooth Scroll ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1628;
+}
+::-webkit-scrollbar-thumb {
+  background: #00b4d8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0096b7;
+}
+
+/* ===== Animations ===== */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(0, 180, 216, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(0, 180, 216, 0.6); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ===== Glass Effect ===== */
+.glass {
+  background: rgba(10, 22, 40, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 180, 216, 0.15);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== Gradient Text ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #00b4d8, #f9a825);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Hero Overlay ===== */
+.hero-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 14, 26, 0.3) 0%,
+    rgba(6, 14, 26, 0.5) 40%,
+    rgba(6, 14, 26, 0.85) 75%,
+    #060e1a 100%
+  );
+}
