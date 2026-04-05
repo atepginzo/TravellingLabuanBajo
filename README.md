@@ -1,10 +1,10 @@
-# TravellingLabuanBajo ⛵
+# TravellingLabuanBajo 
 
 TravellingLabuanBajo adalah sebuah platform *Multi-Page Application* (MPA) booking wisata yang berfokus pada destinasi premium di Labuan Bajo (Pulau Komodo, Pulau Padar, Pink Beach, dll). Proyek ini dibangun dari nol sebagai submission web development dengan mengimplementasikan arsitektur Frontend-Backend yang saling terintegrasi. 
 
 Aplikasi ini tidak menggunakan payment gateway internal, melainkan mengarahkan pesanan secara langsung ke WhatsApp Admin dengan format pesan terstruktur yang otomatis terisi berdasarkan pilihan paket.
 
-## 🌟 Fitur Utama
+## Fitur Utama
 
 - **Landing Page Interaktif**: Menampilkan destinasi unggulan, paket wisata, testimoni, dan artikel tips perjalanan.
 - **Multi-Page Routing**: Navigasi lancar menggunakan React Router tanpa *reload* halaman (`/discovery/:slug`, `/artikel/:slug`, `/pesan/:id`).
@@ -13,7 +13,7 @@ Aplikasi ini tidak menggunakan payment gateway internal, melainkan mengarahkan p
 - **Desain Modern & Responsif**: UI/UX premium bernuansa *dark mode* (Deep Navy) menggunakan Tailwind CSS v4.
 - **Backend API**: Server Express.js modular yang menangani data dummy paket wisata dan memproses request otentikasi.
 
-## 🛠️ Teknologi yang Digunakan
+## Teknologi yang Digunakan
 
 **Frontend:**
 - React (menggunakan Vite)
@@ -27,7 +27,7 @@ Aplikasi ini tidak menggunakan payment gateway internal, melainkan mengarahkan p
 - Express.js
 - CORS & dotenv
 
-## 📂 Struktur Proyek
+## Struktur Proyek
 
 Proyek ini dipisah menjadi dua environment utama:
 
@@ -50,7 +50,7 @@ TravellingLabuanBajo/
     └── tailwind.config.js    
 ```
 
-## 🚀 Cara Menjalankan di Local Environment
+## Cara Menjalankan di Local Environment
 
 Pastikan kamu sudah menginstal **Node.js** di komputermu. Karena ini adalah repository mono, kamu perlu menjalankan terminal terpisah untuk Frontend dan Backend.
 
@@ -72,7 +72,7 @@ npm run dev
 ```
 *Frontend aplikasi akan berjalan otomatis. Kalau tidak terbuka sendiri, kunjungi `http://localhost:5173`.*
 
-## 💡 Notes untuk Modifikasi
+## Notes untuk Modifikasi
 
 - **Mengubah Nomor WhatsApp Admin**: Untuk mengganti tujuan nomor WhatsApp pesanan, silakan edit variabel `adminNumber` yang berada di dalam function `handleSubmit` pada file `frontend/src/pages/Booking.jsx`.
 - **Database/Storage Backend**: Saat ini backend Auth menggunakan *in-memory array* (`const users = []`) dan akan me-reset daftar pengguna bila server Node.js restart. Untuk keperluan *production*, kamu dapat mengaitkannya ke database sejati seperti PostgreSQL, MySQL, atau MongoDB.
