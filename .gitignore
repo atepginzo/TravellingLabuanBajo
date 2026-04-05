@@ -1,10 +1,7 @@
-# Node_modules (mengabaikan semua folder node_modules di manapun)
 node_modules/
 
-# File Environment (Rahasia)
 .env
 .env.*
 
-# Build output
 dist/
 build/
